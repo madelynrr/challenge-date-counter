@@ -15,8 +15,16 @@ function Counter() {
         alignItems: "center",
       }}
     >
-      <div>Step:</div>
-      <div>Count:</div>
+      <div>
+        <button>-</button>
+        Step:
+        <button>+</button>
+      </div>
+      <div>
+        <button>-</button>
+        Count:
+        <button>+</button>
+      </div>
       <div>days from today is</div>
     </div>
   );
