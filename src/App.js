@@ -10,6 +10,7 @@ export default function App() {
 
 function Counter() {
   const [step, setStep] = useState(1);
+  const [count, setCount] = useState(0);
 
   return (
     <div
@@ -25,9 +26,9 @@ function Counter() {
         <button onClick={() => setStep((s) => s + 1)}>+</button>
       </div>
       <div>
-        <button>-</button>
-        Count:
-        <button>+</button>
+        <button onClick={() => setCount((c) => c - 1)}>-</button>
+        Count: {count}
+        <button onClick={() => setCount((c) => c + 1)}>+</button>
       </div>
       <div>days from today is</div>
     </div>
