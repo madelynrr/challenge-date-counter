@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 export default function App() {
   return (
     <div>
@@ -7,6 +9,8 @@ export default function App() {
 }
 
 function Counter() {
+  const [step, setStep] = useState(1);
+
   return (
     <div
       style={{
@@ -16,9 +20,9 @@ function Counter() {
       }}
     >
       <div>
-        <button>-</button>
-        Step:
-        <button>+</button>
+        <button onClick={() => setStep((s) => s - 1)}>-</button>
+        Step: {step}
+        <button onClick={() => setStep((s) => s + 1)}>+</button>
       </div>
       <div>
         <button>-</button>
