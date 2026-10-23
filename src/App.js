@@ -11,6 +11,7 @@ export default function App() {
 function Counter() {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
+  const [date, setDate] = useState(new Date().toDateString());
 
   function handleCountDecrease() {
     setCount((c) => c - step);
@@ -37,6 +38,9 @@ function Counter() {
         <button onClick={handleCountDecrease}>-</button>
         Count: {count}
         <button onClick={handleCountIncrease}>+</button>
+      </div>
+      <div>
+        <div>Today is {date}</div>
       </div>
     </div>
   );
