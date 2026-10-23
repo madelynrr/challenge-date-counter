@@ -41,7 +41,9 @@ function Counter() {
       </div>
       <div>
         <div>
-          {count ? `${count} days from today is ` : `Today is `}
+          {count
+            ? `${count} day${count === 1 ? "" : "s"} from today is `
+            : `Today is `}
           {new Date(
             today.getFullYear(),
             today.getMonth(),
