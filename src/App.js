@@ -12,6 +12,14 @@ function Counter() {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
 
+  function handleCountDecrease() {
+    setCount((c) => c - step);
+  }
+
+  function handleCountIncrease() {
+    setCount((c) => c + step);
+  }
+
   return (
     <div
       style={{
@@ -26,11 +34,10 @@ function Counter() {
         <button onClick={() => setStep((s) => s + 1)}>+</button>
       </div>
       <div>
-        <button onClick={() => setCount((c) => c - 1)}>-</button>
+        <button onClick={handleCountDecrease}>-</button>
         Count: {count}
-        <button onClick={() => setCount((c) => c + 1)}>+</button>
+        <button onClick={handleCountIncrease}>+</button>
       </div>
-      <div>days from today is</div>
     </div>
   );
 }
